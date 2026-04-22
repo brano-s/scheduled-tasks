@@ -46,8 +46,8 @@ with open(selected_letter_path,"r") as letter_txt:
 
 letter_content = letter_content.replace('[NAME]',birthday_record[0]['name'])
 
-my_email = "samko@centrum.sk"
-my_password = "OkreSLevicE"
+my_email = os.environ.get("MY_EMAIL")
+my_password = os.environ.get("MY_PASSWORD")
 
 with smtplib.SMTP("smtp.centrum.sk") as connection:
     connection.starttls()
