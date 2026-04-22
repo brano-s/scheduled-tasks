@@ -12,6 +12,7 @@ import datetime as dt
 import pandas
 import random
 import smtplib
+import os
 
 ################ nacitanie suboru
 df = pandas.read_csv("birthdays.csv")
